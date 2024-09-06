@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trabalho</title>
+</head>
+<body>
+    <script>
+         var temperaturas = [];
+        var meses = ["janeiro", "fevereiro", "março", "abril", "maio", "jsunho",
+                     "julho", "agosto", "setembro", "otubro", "novembro", "dezembro"];
+        for (var i = 0; i < 12; i++) {
+            var temperatura = parseFloat(prompt("digite a media da temperatura " + meses[i] + ":"));
+            temperaturas.push(temperatura);
+        }
+        var somaTemperaturas = 0;
+        for (var i = 0; i < temperaturas.length; i++) {
+            somaTemperaturas += temperaturas[i];
+        }
+        var mediaAnual = somaTemperaturas / temperaturas.length;
+        var resultado = "temperaturas que estão acima da media do ano inteiro :\n";
+        for (var i = 0; i < temperaturas.length; i++) {
+            if (temperaturas[i] > mediaAnual) {
+                resultado += meses[i] + ": " + temperaturas[i] + "°C\n";
+            }
+        }
+        alert(resultado);
+    </script>
+</body>
+</html>

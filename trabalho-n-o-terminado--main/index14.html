@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trabalho</title>
+</head>
+<body>
+    <script>
+         var respostas = [];
+        var perguntas = [
+            "telefonou para a vitima?",
+            "esteve no local do crime?",
+            "mora perto da vitima?",
+            "devia para a vitima?",
+            "ja trabalhou com a vitima?"
+        ];
+        for (var i = 0; i < perguntas.length; i++) {
+            var resposta = prompt(perguntas[i] + " (coloque  'sim' ou 'nao'):");
+            respostas.push(resposta.toLowerCase());
+        }
+        var countSim = 0;
+        for (var i = 0; i < respostas.length; i++) {
+            if (respostas[i] === 'sim') {
+                countSim++;
+            }
+        }
+        var classificacao;
+        if (countSim === 5) {
+            classificacao = "assassino";
+        } else if (countSim >= 3) {
+            classificacao = "cumplice";
+        } else if (countSim === 2) {
+            classificacao = "suspeita";
+        } else {
+            classificacao = "inocente";
+        }
+    alert("classificacao: " + classificacao);
+    </script>
+</body>
+</html>

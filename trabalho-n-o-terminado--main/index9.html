@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trabalho</title>
+</head>
+<body>
+    <script>
+       var numeros = [];
+        var somaQuadrados = 0;
+        for (var i = 0; i < 10; i++) {
+            var numero = parseInt(prompt("coloque o nuumero " + (i + 1) + ":"));
+            numeros.push(numero);
+        }
+        for (var i = 0; i < numeros.length; i++) {
+            somaQuadrados += numeros[i] * numeros[i];
+        }
+        alert("a soma dos quadrados  é: " + somaQuadrados);
+    </script>
+</body>
+</html>

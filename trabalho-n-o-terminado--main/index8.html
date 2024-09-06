@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trabalho</title>
+</head>
+<body>
+    <script>
+        var idades = [];
+        var alturas = [];
+        for (var i = 0; i < 5; i++) {
+            var idade = parseInt(prompt("colooque a idade da pessoa " + (i + 1) + ":"));
+            var altura = parseFloat(prompt("coloque a altura da pessoa " + (i + 1) + " (em metros):"));
+            idades.push(idade);
+            alturas.push(altura);
+        }
+        var idadeInversa = idades.slice().reverse();
+        var alturaInversa = alturas.slice().reverse();
+        alert("idade  inversa: " + idadeInversa.join(", "));
+        alert("altura  inversa: " + alturaInversa.join(", ")); 
+    </script>
+</body>
+</html>
